@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Empleados>
+  <Empleado>
+    <IdEmpleado>1</IdEmpleado>
+    <StrNombre>Juan David Restrepo Gómez</StrNombre>
+    <NumDocumento>1017234561</NumDocumento>
+    <StrDireccion>Calle 50 #45-20, El Poblado, Medellín</StrDireccion>
+    <StrTelefono>3104567821</StrTelefono>
+    <StrEmail>juan.restrepo@empresa.co</StrEmail>
+    <DtmIngreso>2019-02-11</DtmIngreso>
+  </Empleado>
+  <Empleado>
+    <IdEmpleado>2</IdEmpleado>
+    <StrNombre>María Camila Zapata Ospina</StrNombre>
+    <NumDocumento>1036648902</NumDocumento>
+    <StrDireccion>Carrera 70 #44-35, Laureles, Medellín</StrDireccion>
+    <StrTelefono>3156789034</StrTelefono>
+    <StrEmail>maria.zapata@empresa.co</StrEmail>
+    <DtmIngreso>2019-09-02</DtmIngreso>
+  </Empleado>
+  <Empleado>
+    <IdEmpleado>3</IdEmpleado>
+    <StrNombre>Carlos Andrés Múnera Vélez</StrNombre>
+    <NumDocumento>71589340</NumDocumento>
+    <StrDireccion>Carrera 43A #1 Sur-50, Medellín</StrDireccion>
+    <StrTelefono>3207891245</StrTelefono>
+    <StrEmail>carlos.munera@empresa.co</StrEmail>
+    <DtmIngreso>2020-06-15</DtmIngreso>
+  </Empleado>
+  <Empleado>
+    <IdEmpleado>4</IdEmpleado>
+    <StrNombre>Valentina Arango Cardona</StrNombre>
+    <NumDocumento>1020456783</NumDocumento>
+    <StrDireccion>Calle 33 #74-10, Belén, Medellín</StrDireccion>
+    <StrTelefono>3012345678</StrTelefono>
+    <StrEmail>valentina.arango@empresa.co</StrEmail>
+    <DtmIngreso>2021-01-18</DtmIngreso>
+  </Empleado>
+  <Empleado>
+    <IdEmpleado>5</IdEmpleado>
+    <StrNombre>Santiago Henao Builes</StrNombre>
+    <NumDocumento>1037612945</NumDocumento>
+    <StrDireccion>Carrera 80 #32-15, Robledo, Medellín</StrDireccion>
+    <StrTelefono>3186543210</StrTelefono>
+    <StrEmail>santiago.henao@empresa.co</StrEmail>
+    <DtmIngreso>2022-03-07</DtmIngreso>
+  </Empleado>
+  <Empleado>
+    <IdEmpleado>6</IdEmpleado>
+    <StrNombre>Laura Sofía Giraldo Mejía</StrNombre>
+    <NumDocumento>1000872346</NumDocumento>
+    <StrDireccion>Calle 10 #38-25, Manila, Medellín</StrDireccion>
+    <StrTelefono>3225678901</StrTelefono>
+    <StrEmail>laura.giraldo@empresa.co</StrEmail>
+    <DtmIngreso>2023-08-21</DtmIngreso>
+  </Empleado>
+  <Empleado>
+    <IdEmpleado>7</IdEmpleado>
+    <StrNombre>Felipe Alzate Uribe</StrNombre>
+    <NumDocumento>1128394057</NumDocumento>
+    <StrDireccion>Carrera 65 #48-90, Calasanz, Medellín</StrDireccion>
+    <StrTelefono>3118765432</StrTelefono>
+    <StrEmail>felipe.alzate@empresa.co</StrEmail>
+    <DtmIngreso>2024-05-13</DtmIngreso>
+  </Empleado>
+  <Empleado>
+    <IdEmpleado>8</IdEmpleado>
+    <StrNombre>Daniela Ochoa Salazar</StrNombre>
+    <NumDocumento>1039475820</NumDocumento>
+    <StrDireccion>Calle 12 Sur #43-60, El Poblado, Medellín</StrDireccion>
+    <StrTelefono>3173456789</StrTelefono>
+    <StrEmail>daniela.ochoa@empresa.co</StrEmail>
+    <DtmIngreso>2025-02-03</DtmIngreso>
+  </Empleado>
+</Empleados>

@@ -1,0 +1,76 @@
+{
+  "Empleados": [
+    {
+      "IdEmpleado": 1,
+      "StrNombre": "Juan David Restrepo Gómez",
+      "NumDocumento": 1017234561,
+      "StrDireccion": "Calle 50 #45-20, El Poblado, Medellín",
+      "StrTelefono": "3104567821",
+      "StrEmail": "juan.restrepo@empresa.co",
+      "DtmIngreso": "2019-02-11"
+    },
+    {
+      "IdEmpleado": 2,
+      "StrNombre": "María Camila Zapata Ospina",
+      "NumDocumento": 1036648902,
+      "StrDireccion": "Carrera 70 #44-35, Laureles, Medellín",
+      "StrTelefono": "3156789034",
+      "StrEmail": "maria.zapata@empresa.co",
+      "DtmIngreso": "2019-09-02"
+    },
+    {
+      "IdEmpleado": 3,
+      "StrNombre": "Carlos Andrés Múnera Vélez",
+      "NumDocumento": 1152467893,
+      "StrDireccion": "Carrera 43A #1 Sur-50, Medellín",
+      "StrTelefono": "3207891245",
+      "StrEmail": "carlos.munera@empresa.co",
+      "DtmIngreso": "2020-06-15"
+    },
+    {
+      "IdEmpleado": 4,
+      "StrNombre": "Valentina Arango Cardona",
+      "NumDocumento": 1020456783,
+      "StrDireccion": "Calle 33 #74-10, Belén, Medellín",
+      "StrTelefono": "3012345678",
+      "StrEmail": "valentina.arango@empresa.co",
+      "DtmIngreso": "2021-01-18"
+    },
+    {
+      "IdEmpleado": 5,
+      "StrNombre": "Santiago Henao Builes",
+      "NumDocumento": 1037612945,
+      "StrDireccion": "Carrera 80 #32-15, Robledo, Medellín",
+      "StrTelefono": "3186543210",
+      "StrEmail": "santiago.henao@empresa.co",
+      "DtmIngreso": "2022-03-07"
+    },
+    {
+      "IdEmpleado": 6,
+      "StrNombre": "Laura Sofía Giraldo Mejía",
+      "NumDocumento": 1000872346,
+      "StrDireccion": "Calle 10 #38-25, Manila, Medellín",
+      "StrTelefono": "3225678901",
+      "StrEmail": "laura.giraldo@empresa.co",
+      "DtmIngreso": "2023-08-21"
+    },
+    {
+      "IdEmpleado": 7,
+      "StrNombre": "Felipe Alzate Uribe",
+      "NumDocumento": 1128394057,
+      "StrDireccion": "Carrera 65 #48-90, Calasanz, Medellín",
+      "StrTelefono": "3118765432",
+      "StrEmail": "felipe.alzate@empresa.co",
+      "DtmIngreso": "2024-05-13"
+    },
+    {
+      "IdEmpleado": 8,
+      "StrNombre": "Daniela Ochoa Salazar",
+      "NumDocumento": 1039475820,
+      "StrDireccion": "Calle 12 Sur #43-60, El Poblado, Medellín",
+      "StrTelefono": "3173456789",
+      "StrEmail": "daniela.ochoa@empresa.co",
+      "DtmIngreso": "2025-02-03"
+    }
+  ]
+}
