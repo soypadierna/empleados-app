@@ -20,7 +20,7 @@ class EmpleadoService:
         empleados = repositorio.cargar_todos()  # si falla, no se cambia nada
         self._repo = repositorio
         self._empleados = empleados
-        self._ultimo_id = 0
+        self._ultimo_id = max((e.IdEmpleado for e in empleados), default=0)
 
     def listar(self) -> list[Empleado]:
         return list(self._empleados)
@@ -114,6 +114,8 @@ class EmpleadoService:
             raise ValueError("La fecha de ingreso es obligatoria.")
         if not _RE_FECHA.fullmatch(fecha_txt):
             raise ValueError("La fecha de ingreso debe tener formato yyyy-MM-dd.")
+        if not 1900 <= fecha.year <= 2100:
+            raise ValueError("La fecha de ingreso debe estar entre 1900 y 2100.")
         try:
             fecha = datetime.strptime(fecha_txt, FORMATO_FECHA)
         except ValueError:

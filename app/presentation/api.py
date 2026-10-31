@@ -27,8 +27,14 @@ class Api:
         self._fuentes = fuentes
 
     @staticmethod
+    def _dto(e):
+        d = e.to_dict()
+        d["NumDocumento"] = str(d["NumDocumento"])
+        return d
+
+    @staticmethod
     def _lista(empleados):
-        return [e.to_dict() for e in empleados]
+        return [Api._dto(e) for e in empleados]
 
     @_seguro
     def listar(self):
@@ -40,11 +46,11 @@ class Api:
 
     @_seguro
     def agregar(self, datos):
-        return self._servicio.agregar(datos).to_dict()
+        return self._dto(self._servicio.agregar(datos))
 
     @_seguro
     def editar(self, id_empleado, datos):
-        return self._servicio.editar(id_empleado, datos).to_dict()
+        return self._dto(self._servicio.editar(id_empleado, datos))
 
     @_seguro
     def eliminar(self, id_empleado):
@@ -74,7 +80,7 @@ class Api:
         if not ruta.lower().endswith(".csv"):
             ruta += ".csv"
         with open(ruta, "w", encoding="utf-8-sig", newline="") as f:
-            w = csv.writer(f)
+            w = csv.writer(f, delimiter=";")
             w.writerow(_ENCABEZADOS)
             for e in self._servicio.listar():
                 d = e.to_dict()
