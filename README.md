@@ -1,6 +1,89 @@
 # Gestión de Empleados
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![pywebview](https://img.shields.io/badge/UI-pywebview-2563eb)
+![Datos](https://img.shields.io/badge/Datos-JSON%20%7C%20XML-orange)
+![Dependencias](https://img.shields.io/badge/Dependencias-solo%20pywebview-brightgreen)
+![Plataforma](https://img.shields.io/badge/Plataforma-Windows-0078D6?logo=windows&logoColor=white)
+
 App de escritorio CRUD (Python 3.10+ y pywebview). Los datos se guardan en JSON o XML. Solo usa la librería estándar para los datos.
+
+![Captura de la aplicación](docs/captura.png)
+
+## Vista general de la interfaz
+```
+┌──────────────────────────────────────────────────────────────────────────┐
+│ Gestión de Empleados   Fuente [JSON ▾] [🔍 Buscar...........] [Exportar CSV]│
+├───────────────────┬──────────────────────────────────────────────────────┤
+│ ID        [  9  ] │ ID │ Nombre        │ Documento  │ Dirección │ ...     │
+│ Nombre    [.....] │────┼───────────────┼────────────┼───────────┼─────────│
+│ Documento [.....] │ 1  │ Juan David R… │ 1017234561 │ Calle 50… │ ...     │
+│ Dirección [.....] │ 2  │ María Camila… │ 1036648902 │ Carrera…  │ ...     │
+│ Teléfono  [.....] │ 3  │ Carlos Andrés │ 1152467893 │ Carrera…  │ ...     │
+│ Email     [.....] │ …  │ …             │ …          │ …         │ …       │
+│ Ingreso   [date ] │                                                      │
+│ [Nuevo][Guardar][Eliminar]                                               │
+├───────────────────┴──────────────────────────────────────────────────────┤
+│ ✔ Empleado agregado (ID 9).                              8 empleado(s)   │
+└──────────────────────────────────────────────────────────────────────────┘
+```
+
+## Funcionalidades
+| | Función | Detalle |
+|---|---|---|
+| 📋 | Listar | Tabla de 7 columnas, carga inicial desde JSON |
+| ➕ | Agregar | ID autoincremental, validaciones en español |
+| ✏️ | Editar | Clic en fila, carga el formulario en modo edición |
+| 🗑️ | Eliminar | Con confirmación previa |
+| 🔍 | Buscar | En vivo por nombre, documento o email |
+| 🔄 | Fuente | Alternar entre JSON y XML sin reiniciar |
+| 📤 | Exportar | CSV en UTF-8 con BOM |
+
+## Arquitectura por capas
+```mermaid
+flowchart LR
+    UI["ui<br/>HTML · CSS · JS"] -->|js_api| API["presentation<br/>Api"]
+    API --> SVC["business<br/>EmpleadoService"]
+    SVC -.usa.-> MOD["models<br/>Empleado"]
+    SVC --> REPO{{"data<br/>Repositorio"}}
+    REPO --> JSON[("empleados.json")]
+    REPO --> XML[("empleados.xml")]
+```
+
+## Flujo de guardado
+```mermaid
+sequenceDiagram
+    actor U as Usuario
+    participant J as app.js
+    participant A as Api
+    participant S as EmpleadoService
+    participant R as Repositorio
+    U->>J: Clic en Guardar
+    J->>A: agregar(datos) / editar(id, datos)
+    A->>S: agregar / editar
+    S->>S: Validar (ValueError si falla)
+    S->>R: guardar_todos(lista)
+    R-->>S: escritura atómica OK
+    S-->>A: Empleado
+    A-->>J: {ok, data, error}
+    J-->>U: Tabla actualizada + mensaje de estado
+```
+
+## Modelo de datos
+```mermaid
+classDiagram
+    class Empleado {
+        +int IdEmpleado
+        +str StrNombre
+        +int NumDocumento
+        +str StrDireccion
+        +str StrTelefono
+        +str StrEmail
+        +datetime DtmIngreso
+        +to_dict() dict
+        +from_dict(d) Empleado
+    }
+```
 
 ## Instalación
 ```
