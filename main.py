@@ -6,6 +6,15 @@ from app.data.repositorio_json import RepositorioJSON
 from app.data.repositorio_xml import RepositorioXML
 from app.presentation.api import Api
 
+def _poner_icono(ventana):
+    try:
+        from System import Action
+        from System.Drawing import Icon
+        ruta = str(ruta_recurso("assets", "icono.ico"))
+        form = ventana.native
+        form.Invoke(Action(lambda: setattr(form, "Icon", Icon(ruta))))
+    except Exception:
+        pass
 
 def main():
     fuentes = {
@@ -22,7 +31,7 @@ def main():
         raise SystemExit(1)
 
     api = Api(servicio, fuentes)
-    webview.create_window(
+    ventana = webview.create_window(
         "Gestión de Empleados",
         url=str(ruta_recurso("app", "ui", "index.html")),
         js_api=api,
@@ -30,8 +39,8 @@ def main():
         height=650,
         min_size=(900, 600),
     )
+    ventana.events.shown += lambda: _poner_icono(ventana)
     webview.start()
-
 
 if __name__ == "__main__":
     main()

@@ -10,23 +10,6 @@ App de escritorio CRUD (Python 3.10+ y pywebview). Los datos se guardan en JSON 
 
 ![Captura de la aplicación](docs/captura.png)
 
-## Vista general de la interfaz
-```
-┌──────────────────────────────────────────────────────────────────────────┐
-│ Gestión de Empleados   Fuente [JSON ▾] [🔍 Buscar...........] [Exportar CSV]│
-├───────────────────┬──────────────────────────────────────────────────────┤
-│ ID        [  9  ] │ ID │ Nombre        │ Documento  │ Dirección │ ...     │
-│ Nombre    [.....] │────┼───────────────┼────────────┼───────────┼─────────│
-│ Documento [.....] │ 1  │ Juan David R… │ 1017234561 │ Calle 50… │ ...     │
-│ Dirección [.....] │ 2  │ María Camila… │ 1036648902 │ Carrera…  │ ...     │
-│ Teléfono  [.....] │ 3  │ Carlos Andrés │ 1152467893 │ Carrera…  │ ...     │
-│ Email     [.....] │ …  │ …             │ …          │ …         │ …       │
-│ Ingreso   [date ] │                                                      │
-│ [Nuevo][Guardar][Eliminar]                                               │
-├───────────────────┴──────────────────────────────────────────────────────┤
-│ ✔ Empleado agregado (ID 9).                              8 empleado(s)   │
-└──────────────────────────────────────────────────────────────────────────┘
-```
 
 ## Funcionalidades
 | | Función | Detalle |
