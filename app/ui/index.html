@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestión de Empleados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="barra">
+    <h1>Gestión de Empleados</h1>
+    <div class="controles">
+      <label for="cmbFuente">Fuente</label>
+      <select id="cmbFuente">
+        <option value="json">JSON</option>
+        <option value="xml">XML</option>
+      </select>
+      <input type="search" id="txtBuscar" placeholder="Buscar por nombre, documento o email…" autocomplete="off">
+      <button type="button" id="btnExportar">Exportar CSV</button>
+    </div>
+  </header>
+
+  <main class="contenido">
+    <aside class="panel">
+      <form id="frmEmpleado" novalidate>
+        <div class="campo">
+          <label for="txtId">ID</label>
+          <input type="text" id="txtId" readonly tabindex="-1">
+        </div>
+        <div class="campo">
+          <label for="txtNombre">Nombre</label>
+          <input type="text" id="txtNombre" maxlength="50">
+        </div>
+        <div class="campo">
+          <label for="txtDocumento">Documento</label>
+          <input type="text" id="txtDocumento" inputmode="numeric" maxlength="19">
+        </div>
+        <div class="campo">
+          <label for="txtDireccion">Dirección</label>
+          <input type="text" id="txtDireccion" maxlength="50">
+        </div>
+        <div class="campo">
+          <label for="txtTelefono">Teléfono</label>
+          <input type="text" id="txtTelefono" maxlength="50">
+        </div>
+        <div class="campo">
+          <label for="txtEmail">Email</label>
+          <input type="text" id="txtEmail" maxlength="50">
+        </div>
+        <div class="campo">
+          <label for="dtpIngreso">Fecha de ingreso</label>
+          <input type="date" id="dtpIngreso">
+        </div>
+        <div class="acciones">
+          <button type="button" id="btnNuevo">Nuevo</button>
+          <button type="submit" id="btnGuardar" class="primario">Guardar</button>
+          <button type="button" id="btnEliminar" class="peligro" disabled>Eliminar</button>
+        </div>
+      </form>
+    </aside>
+
+    <section class="tabla-contenedor">
+      <table id="grdEmpleados">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Documento</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Fecha de ingreso</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="estado-barra">
+    <span id="lblEstado" class="estado">Listo.</span>
+    <span id="lblConteo"></span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
